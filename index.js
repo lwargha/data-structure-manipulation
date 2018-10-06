@@ -21,16 +21,14 @@ var countries = cities
     .map(city => city.country)
     .filter(toUnique)
     .sort()
-    .map(function(countryName){
-        return {
+    .map(countryName => ({
             name: countryName,
             states : cities
                 .filter(city => city.country === countryName)
                 .map(city => city.state)
                 .filter(toUnique)
                 .sort()
-                .map(function(stateName){
-                    return {
+                .map(stateName => ({
                         name:stateName,
                         cities: cities
                             .filter(city => city.state === stateName)
@@ -42,8 +40,8 @@ var countries = cities
                             })
                             .sort((a,b)=> a.population - b.population)
                     }
-                })
-        }
-    });
+                ))
+        })
+    );
 
 console.log(stringify(countries));
