@@ -1,0 +1,16 @@
+{
+  "name": "countries",
+  "version": "1.0.0",
+  "description": "my answer to the countries problem",
+  "main": "index.js",
+  "dependencies": {
+    "d3-dsv": "^1.0.10",
+    "json-stringify-pretty-compact": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua McKinney",
+  "license": "MIT"
+}
