@@ -9,7 +9,7 @@ cities = dsv.csvParse(csvString, row =>{
         country: row.Country,
         state: row.State,
         name: row.City,
-        population: row.Population
+        population: +row.Population
     };
 });
 
