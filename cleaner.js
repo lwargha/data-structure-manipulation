@@ -43,7 +43,8 @@ var countries = cities
             //before we make the state obj, we need to get the array of city objs for this state
             var citiesOut = cities
                     // filter down to cities that have the same state name as the current state
-                    .filter(city => city.state === stateName)
+                    // also make sure we have the same country name because two states could share the same name if in differnt countries
+                    .filter(city => city.state === stateName && city.country === countryName)
                     // now map them in to the city objects we want
                     .map(city => {
                         return {
