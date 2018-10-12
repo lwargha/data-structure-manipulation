@@ -7,7 +7,7 @@ cities = dsv.csvParse(csvString, row =>{
         country: row.Country,
         state: row.State,
         name: row.City,
-        population: row.Population
+        population: +row.Population
     };
 });
 
@@ -31,7 +31,7 @@ var countries = cities
                 .map(stateName => ({
                         name:stateName,
                         cities: cities
-                            .filter(city => city.state === stateName)
+                            .filter(city => city.state === stateName && city.country === countryName)
                             .map(city => {
                                 return {
                                 name : city.name,
